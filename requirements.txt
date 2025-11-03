@@ -1,15 +1,19 @@
-# Simplified dependencies for easy deployment (no compilation needed)
+# Dependencies for Render deployment
+# Using specific versions that have pre-built wheels
 fastapi==0.104.0
 uvicorn==0.24.0
 sqlalchemy==2.0.23
-pydantic[email]==2.5.0
+pydantic==2.5.0
+pydantic-core==2.14.1
 pydantic-settings==2.1.0
 python-dotenv==1.0.0
 pyjwt==2.8.0
 python-multipart==0.0.6
+email-validator==2.1.0
+annotated-types==0.6.0
+starlette==0.27.0
+typing-extensions==4.8.0
 
-# Optional - only needed if using Supabase
-# supabase==2.3.0
-# psycopg2-binary==2.9.9
-# alembic==1.13.0
+# Force binary installs (no source compilation)
+--only-binary=:all:
 
